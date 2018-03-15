@@ -49,8 +49,8 @@ cp -r $CSCOPE_DIR/* $CSCOPE_TARGET_DIR/
 echo "cscope files have been installed, go to $CSCOPE_TARGET_DIR to generate tags"
 
 echo "Installing vimrc config"
-cp $VIMRC_DIR/$PROJECT/vimrc $VIMRC_TARGET_DIR/.vimrc
-cp -r $VIMRC_DIR/$PROJECT/myvimrc $VIMRC_TARGET_DIR/.myvimrc 
+cp $VIMRC_DIR/vimrc $VIMRC_TARGET_DIR/.vimrc
+cp -r $VIMRC_DIR/myvimrc $VIMRC_TARGET_DIR/.myvimrc 
 
 if [ $TARGET = $LOCAL_VM ]
 then
