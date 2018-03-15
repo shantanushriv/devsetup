@@ -22,7 +22,6 @@ echo "Running for user: $user"
 #TODO: Read from file
 commandList=("yum -y install vim" \
 "yum -y install zsh" \
-"mkdir -p ~/tools" \
 "curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o ohmyzsh.sh" \
 "sh ohmyzsh.sh" \
 "rm ohmyzsh.sh" \
@@ -60,7 +59,7 @@ then
 fi
 
 echo "Setting up cscope path in vimrc"
-cat $VIMRC_DIR/$PROJECT/myvimrc/genericvimrc | sed -e "s|<CSCOPE_HOME>|$CSCOPE_TARGET_DIR/|g" > $VIMRC_TARGET_DIR/.myvimrc/genericvimrc
+cat $VIMRC_DIR/myvimrc/genericvimrc | sed -e "s|<CSCOPE_HOME>|$CSCOPE_TARGET_DIR/|g" > $VIMRC_TARGET_DIR/.myvimrc/genericvimrc
 
 echo "Excelsior!!!!!"
 echo "Setup Done, Code, Sleep, Repeat!"
