@@ -1,0 +1,37 @@
+function SourceTags(location)
+    let l:maps_path = a:location . 'cscope_maps.vim'
+    execute 'source '. l:maps_path
+    let l:files = split(globpath(a:location, '*'),'\n')
+    call filter(l:files, 'isdirectory(v:val)')
+    for one in l:files
+        execute 'cs add ' . one . '/cscope.out'
+    endfor
+endfunction
+
+function RegenTags(source)
+    execute '!'. cscope_home . 'genTags.sh'
+endfunction
+
+function DefaultSettings()
+    set nu
+    set ai
+    set et
+    set sw=4
+    set ts=4
+    set sm
+    set incsearch
+    set hlsearch
+    syntax on
+endfunction
+
+let g:cscope_home = '<CSCOPE_HOME>'
+let b:file = expand('%')
+if b:file =~ '^\f\+.go$'
+    source ~/.myvimrc/golangvimrc
+elseif b:file =~ '^\f\+.py'
+    call DefaultSettings()
+    call SourceTags(cscope_home) "TODO: fix later 
+else
+    call DefaultSettings()
+    call SourceTags(cscope_home) "TODO: fix later 
+endif
