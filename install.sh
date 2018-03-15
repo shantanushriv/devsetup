@@ -1,4 +1,5 @@
 if [ $# -ne 2 ]
+then
     echo "Usage: ./install.sh <project-name> <target>"
     exit 1
 fi
