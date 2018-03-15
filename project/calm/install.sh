@@ -10,6 +10,7 @@ runCommand() {
     echo "Running command $cmd"
     output=`$cmd`
     if [ $? -ne 0 ]
+    then
         echo "Failed to execute $cmd command with error $output"
         exit 1
     fi
