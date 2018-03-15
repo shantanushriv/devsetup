@@ -1,6 +1,6 @@
 if [ $# -ne 2 ]
 then
-    echo "Usage: ./install.sh <project-name> <target>"
+    echo "Usage: ./install.sh <project-name> <remote|local>"
     exit 1
 fi
 
