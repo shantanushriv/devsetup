@@ -27,7 +27,7 @@ commandList=("yum -y install vim" \
 "yum -y install cscope")
 
 for work in "${commandList[@]}"; do
-    runCommand $work
+    runCommand "$work"
 done
 
 if [ "$CSCOPE_DIR" == "" ]
@@ -59,4 +59,5 @@ fi
 echo "Setting up cscope path in vimrc"
 cat $VIMRC_DIR/$PROJECT/myvimrc/genericvimrc | sed -e "s|<CSCOPE_HOME>|$CSCOPE_TARGET_DIR|g" > $VIMRC_TARGET_DIR/.myvimrc/genericvimrc
 
-echo "Setup Done, Now - Code, Sleep, Repeat!"
+echo "Excelsior!!!!!"
+echo "Setup Done, Code, Sleep, Repeat!"
