@@ -1,3 +1,6 @@
+# Author: Shantanu Shrivastava
+# Description: This is the main installer
+
 if [ $# -ne 2 ]
 then
     echo "Usage: ./install.sh <project-name> <remote|local>"
