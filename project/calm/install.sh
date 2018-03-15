@@ -56,4 +56,7 @@ then
     cp $BASH_DIR/bash_profile $BASH_TARGET_DIR/.bash_profile
 fi
 
+echo "Setting up cscope path in vimrc"
+cat $VIMRC_DIR/$PROJECT/myvimrc/genericvimrc | sed -e "s|<CSCOPE_HOME>|$CSCOPE_TARGET_DIR|g" > $VIMRC_TARGET_DIR/.myvimrc/genericvimrc
+
 echo "Setup Done, Now - Code, Sleep, Repeat!"
