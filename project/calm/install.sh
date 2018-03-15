@@ -23,7 +23,9 @@ echo "Running for user: $user"
 commandList=("yum -y install vim" \
 "yum -y install zsh" \
 "mkdir -p ~/tools" \
-"sh -c \"$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" \
+"curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o ohmyzsh.sh" \
+"sh ohmyzsh.sh" \
+"rm ohmyzsh.sh" \
 "pip install pycscope" \
 "yum -y install cscope")
 
