@@ -6,7 +6,7 @@ fi
 
 export PROJECT=$1
 export TARGET=$2
-export ROOT_DIR=`cwd`
+export ROOT_DIR=`pwd`
 export BASE_ENV=$ROOT_DIR/base.env
 
 PROJECT=`echo "$PROJECT" | sed -e 's/\(.*\)/\L\1/'`
